@@ -1,6 +1,7 @@
 package Main;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class GameWindow extends JFrame {
 	
@@ -12,6 +13,11 @@ public class GameWindow extends JFrame {
 		
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
+	}
+	
+	public void changePanel(JPanel panel) {
+		this.getContentPane().removeAll();
+		this.getContentPane().add(new JPanel());
 	}
 	
 	

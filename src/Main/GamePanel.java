@@ -11,9 +11,6 @@ public class GamePanel extends JPanel{
 	private int xDelta = 100;
 	private int yDelta = 100;
 	
-	private int xDir = 1;
-	private int yDir = 1;
-	
 	private int frames = 0;
 	private long lastCheck;
 	
@@ -31,11 +28,10 @@ public class GamePanel extends JPanel{
 		this.yDelta = y;
 	}
 	
-	public GamePanel() {
+	public GamePanel(Game game) {
+		this.addKeyListener(new KeyboardInput(this, game));
 		this.addMouseListener(new MouseInput(this));
 		this.addMouseMotionListener(new MouseInput(this));
-		this.addKeyListener(new KeyboardInput(this));
-
 	}
 
 	public void paintComponent(Graphics g) {
@@ -55,6 +51,7 @@ public class GamePanel extends JPanel{
 	}
 
 	private void updateRectangle() {
+		/*
 		if(xDelta > 300 || xDelta < 0) 
 			xDir *= -1;
 		if(yDelta > 400 || yDelta < 0)
@@ -62,5 +59,6 @@ public class GamePanel extends JPanel{
 		
 		xDelta += xDir; 
 	    yDelta += yDir;
+	    */
 	}
 }

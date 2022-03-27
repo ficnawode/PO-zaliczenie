@@ -1,7 +1,6 @@
 package Main;
 
 import java.awt.CardLayout;
-
 import javax.swing.JPanel;
 
 public class Game {

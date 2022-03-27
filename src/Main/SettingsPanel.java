@@ -5,12 +5,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import ResManagement.Images;
 
 public class SettingsPanel extends JPanel {
 	
 	Game game;
 	JButton menuButton;
+	JLabel testImage;
 	
 	public SettingsPanel(Game game) {
 		this.game = game;
@@ -27,7 +31,9 @@ public class SettingsPanel extends JPanel {
 		menuButton.setBounds(0, 0, 100, 30);
 		this.add(menuButton);
 		
-		
+		testImage = new JLabel(Images.getImgIcon("example.png"));
+		testImage.setBounds(50,50,100,100);
+		this.add(testImage);
 
 
 	}

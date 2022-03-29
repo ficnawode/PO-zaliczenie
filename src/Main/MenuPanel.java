@@ -1,6 +1,7 @@
 package Main;
 
 import java.awt.Graphics;
+import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,7 +18,7 @@ public class MenuPanel extends JPanel {
 	public MenuPanel(Game game) {
 		this.game = game;
 		
-		this.setLayout(null);
+		this.setLayout(new GridBagLayout());
 		
 		this.startButton = new JButton("start");
 		startButton.addActionListener(new ActionListener(){  

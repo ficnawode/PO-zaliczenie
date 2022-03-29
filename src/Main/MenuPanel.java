@@ -18,6 +18,7 @@ public class MenuPanel extends JPanel {
 	JButton quitButton;
 	
 	public MenuPanel(Game game) {
+
 		Image img = Toolkit.getDefaultToolkit().getImage("menu.png");
 		
 		this.game = game;

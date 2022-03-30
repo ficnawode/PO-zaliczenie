@@ -1,16 +1,23 @@
 package ResManagement;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.Map;
 
-import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class Sound {
-
-	public static Clip loadClip( String fileName )
+public class SoundManager {
+	Hashtable<String, Clip> soundDictionary;
+	
+	public SoundManager() {
+		soundDictionary = new Hashtable<String, Clip>();
+		loadClip("click1.wav", "click1");
+	}
+	
+	private void loadClip( String fileName, String soundName )
 	{
 	    Clip in = null;
 
@@ -18,25 +25,19 @@ public class Sound {
 	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("./src/ResManagement/sound/" + fileName));
 	        in = AudioSystem.getClip();
 	        in.open(audioIn);
+	        soundDictionary.put(soundName, in);
 	    }
 	    catch( Exception e )
 	    {
 	        e.printStackTrace();
 	    }
-
-	    return in;
 	}
 	
-	public static void playClip( Clip clip )
+	public void playClip(String soundName)
 	{
+		Clip clip = soundDictionary.get(soundName);
 	    if( clip.isRunning() ) clip.stop();
 	            clip.setFramePosition( 0 );
 	    clip.start();
 	}
-	
-	public static void loadAndPlaySound(String fileName) {
-		playClip(loadClip(fileName));
-	}
-	
-	
 }

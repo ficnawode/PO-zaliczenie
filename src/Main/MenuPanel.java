@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import ResManagement.Sound;
+
 public class MenuPanel extends JPanel {
 	
 	Game game;
@@ -22,7 +24,7 @@ public class MenuPanel extends JPanel {
 		this.startButton = new JButton("start");
 		startButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-			           game.changeToCard("game");
+			    game.changeToCard("game");
 			}  
 			});  
 		
@@ -31,8 +33,9 @@ public class MenuPanel extends JPanel {
 		
 		this.settingsButton = new JButton("settings");
 		settingsButton.addActionListener(new ActionListener(){  
-			public void actionPerformed(ActionEvent e){  
-			           game.changeToCard("settings");
+			public void actionPerformed(ActionEvent e){ 
+				game.getSoundManager().playClip("click1");
+			    game.changeToCard("settings");
 			}  
 			}); 
 		settingsButton.setBounds(0, 50, 220, 30);

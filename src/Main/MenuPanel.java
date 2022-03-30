@@ -1,6 +1,9 @@
 package Main;
 
 import java.awt.Graphics;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,10 +20,16 @@ public class MenuPanel extends JPanel {
 	JButton quitButton;
 	
 	public MenuPanel(Game game) {
+
+		Image img = Toolkit.getDefaultToolkit().getImage("menu.png");
+		
 		this.game = game;
 		
-		this.setLayout(null);
-		
+		this.setLayout(new GridBagLayout());
+		//public void paintComponent(Graphics g) {
+		//	   super.paintComponent(g);
+		//	   g.drawImage(img, 0, 0, null);
+		//	}
 		this.startButton = new JButton("start");
 		startButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  

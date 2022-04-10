@@ -1,5 +1,6 @@
 package ResManagement;
 
+import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -12,6 +13,17 @@ public class Images {
 		try {
 			BufferedImage bImg = ImageIO.read(new File("./src/ResManagement/images/" + name));
 			return new ImageIcon(bImg);
+		} catch (IOException e) {
+			System.out.println("Image not found.");
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static Image getImage(String name) {		
+		try {
+			BufferedImage bImg = ImageIO.read(new File("./src/ResManagement/images/" + name));
+			return bImg;
 		} catch (IOException e) {
 			System.out.println("Image not found.");
 			e.printStackTrace();

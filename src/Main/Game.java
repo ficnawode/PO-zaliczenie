@@ -26,11 +26,11 @@ public class Game {
 		cl = new CardLayout();
 		cardPanel.setLayout(cl);
 		
-		gamePanel = new GamePanel(this);
-		cardPanel.add(gamePanel, "game");
-		
 		menuPanel = new MenuPanel(this);		
 		cardPanel.add(menuPanel, "menu");
+		
+		gamePanel = new GamePanel(this);
+		cardPanel.add(gamePanel, "game");
 		
 		settingsPanel = new SettingsPanel(this);		
 		cardPanel.add(settingsPanel, "settings");

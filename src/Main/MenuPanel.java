@@ -7,64 +7,76 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import ResManagement.Images;
 import ResManagement.Sound;
 
 public class MenuPanel extends JPanel {
 	
 	Game game;
+	
+	Image bgImg;
+	ImageIcon buttonIcon;
 	JButton startButton;
 	JButton settingsButton;
 	JButton quitButton;
 	
 	public MenuPanel(Game game) {
 
-		Image img = Toolkit.getDefaultToolkit().getImage("menu.png");
+		this.bgImg = Images.getImage("menu.png");
+		this.buttonIcon = new ImageIcon(Images.getImage("menu.png").getScaledInstance(100, 50, Image.SCALE_DEFAULT));
 		
-		this.game = game;
 		
 		this.setLayout(new GridBagLayout());
-		//public void paintComponent(Graphics g) {
-		//	   super.paintComponent(g);
-		//	   g.drawImage(img, 0, 0, null);
-		//	}
-		this.startButton = new JButton("start");
+		
+		this.startButton = new JButton(Images.getImgIcon("startButton.png"));
 		startButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
+				game.getSoundManager().playClip("click1");
 			    game.changeToCard("game");
 			}  
 			});  
-		
-		startButton.setBounds(0, 0, 220, 30);
+		startButton.setBorderPainted(false);
+	    startButton.setFocusPainted(false);
+	    startButton.setContentAreaFilled(false);
 		this.add(startButton);
 		
-		this.settingsButton = new JButton("settings");
+		this.settingsButton = new JButton(Images.getImgIcon("settingsButton.png"));
 		settingsButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){ 
 				game.getSoundManager().playClip("click1");
 			    game.changeToCard("settings");
 			}  
 			}); 
-		settingsButton.setBounds(0, 50, 220, 30);
+		settingsButton.setBorderPainted(false);
+	    settingsButton.setFocusPainted(false);
+	    settingsButton.setContentAreaFilled(false);
 		this.add(settingsButton);
 
 		
-		this.quitButton = new JButton("quit");
+		this.quitButton = new JButton(Images.getImgIcon("quitButton.png"));
 		quitButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-			           System.exit(0);
+				game.getSoundManager().playClip("click1");
+			    System.exit(0);
 			}  
-			}); 
-		quitButton.setBounds(0, 100, 220, 30);
+			});
+		quitButton.setBorderPainted(false);
+	    quitButton.setFocusPainted(false);
+	    quitButton.setContentAreaFilled(false);
 		this.add(quitButton);
 		
 
 
 	}
 
+	@Override
 	public void paintComponent(Graphics g) {
-		
+		super.paintComponent(g);
+		g.drawImage(bgImg, 0,0,null);
 	}
 }

@@ -12,19 +12,19 @@ import ResManagement.Images;
 
 public class SettingsPanel extends JPanel {
 	
-	Game game;
+	StateManager stateManager;
 	JButton menuButton;
 	JLabel testImage;
 	
-	public SettingsPanel(Game game) {
-		this.game = game;
+	public SettingsPanel(StateManager stateManager) {
+		this.stateManager = stateManager;
 		
 		this.setLayout(null);
 		
 		this.menuButton = new JButton("menu");
 		menuButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-			           game.changeToCard("menu");
+			           stateManager.changeToCard("menu");
 			}  
 			});  
 		
@@ -34,8 +34,6 @@ public class SettingsPanel extends JPanel {
 		testImage = new JLabel(Images.getImgIcon("example.png"));
 		testImage.setBounds(50,50,100,100);
 		this.add(testImage);
-
-
 	}
 
 	public void paintComponent(Graphics g) {

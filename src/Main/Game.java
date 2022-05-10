@@ -18,7 +18,6 @@ public class Game {
 	private SoundManager soundManager;
 	
 	public Game() {
-		
 		cardPanel = new JPanel();
 		gameWindow = new GameWindow();
 		gameWindow.add(cardPanel);
@@ -52,5 +51,9 @@ public class Game {
 	
 	public SoundManager getSoundManager() {
 		return soundManager;
+	}
+	
+	public GameWindow getGameWindow() {
+		return gameWindow;
 	}
 }

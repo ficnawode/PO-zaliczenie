@@ -9,10 +9,12 @@ public class GameWindow extends JFrame {
 	public GameWindow() {
 		super();
 	
-		this.setSize(800,600);
+		this.setSize(1280,800);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		this.setLocationRelativeTo(null);
+		this.setResizable(true);
+		this.setFocusable(true);
 		this.setVisible(true);
 	}
 	

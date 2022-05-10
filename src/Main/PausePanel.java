@@ -6,23 +6,24 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.plaf.nimbus.State;
 
 public class PausePanel extends JPanel {
 	
-	Game game;
+	StateManager stateManager;
 	JButton menuButton;
 	JButton gameButton;
 
 	
-	public PausePanel(Game game) {
-		this.game = game;
+	public PausePanel(StateManager stateManager) {
+		this.stateManager = stateManager;
 		
 		this.setLayout(null);
 		
 		this.menuButton = new JButton("back");
 		menuButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-			           game.changeToCard("menu");
+			           stateManager.changeToCard("menu");
 			}  
 			});  
 		
@@ -30,16 +31,15 @@ public class PausePanel extends JPanel {
 		this.add(menuButton);
 		
 		this.gameButton = new JButton("back to game");
-		gameButton.addActionListener(new ActionListener(){  
+		gameButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){  
-			           game.changeToCard("game");
+			    stateManager.getGamePanel().getInstance().setPaused(false);
+				stateManager.changeToCard("game");
 			}  
 			});  
 		
 		gameButton.setBounds(0, 50, 100, 30);
 		this.add(gameButton);
-
-
 	}
 
 	public void paintComponent(Graphics g) {

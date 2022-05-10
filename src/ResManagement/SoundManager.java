@@ -15,6 +15,8 @@ public class SoundManager {
 	public SoundManager() {
 		soundDictionary = new Hashtable<String, Clip>();
 		loadClip("click1.wav", "click1");
+		loadClip("jump.wav", "jump");
+		loadClip("run.wav", "run");
 	}
 	
 	private void loadClip( String fileName, String soundName )
@@ -22,7 +24,7 @@ public class SoundManager {
 	    Clip in = null;
 
 	    try{
-	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("./src/ResManagement/sound/" + fileName));
+	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("./res/sound/" + fileName));
 	        in = AudioSystem.getClip();
 	        in.open(audioIn);
 	        soundDictionary.put(soundName, in);
@@ -36,8 +38,8 @@ public class SoundManager {
 	public void playClip(String soundName)
 	{
 		Clip clip = soundDictionary.get(soundName);
-	    if( clip.isRunning() ) clip.stop();
-	            clip.setFramePosition( 0 );
+	    if( clip.isRunning() ) return;
+	    clip.setFramePosition( 0 );
 	    clip.start();
 	}
 }

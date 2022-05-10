@@ -15,7 +15,7 @@ public class Sound {
 	    Clip in = null;
 
 	    try{
-	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("./src/ResManagement/sound/" + fileName));
+	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("./res/sound/" + fileName));
 	        in = AudioSystem.getClip();
 	        in.open(audioIn);
 	    }

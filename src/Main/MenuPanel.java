@@ -17,7 +17,7 @@ import ResManagement.Sound;
 
 public class MenuPanel extends JPanel {
 	
-	Game game;
+	StateManager stateManager;
 	
 	Image bgImg;
 	ImageIcon buttonIcon;
@@ -25,10 +25,9 @@ public class MenuPanel extends JPanel {
 	JButton settingsButton;
 	JButton quitButton;
 	
-	public MenuPanel(Game game) {
-
-		this.bgImg = Images.getImage("menu.png");
-		this.buttonIcon = new ImageIcon(Images.getImage("menu.png").getScaledInstance(100, 50, Image.SCALE_DEFAULT));
+	public MenuPanel(StateManager stateManager) {
+		this.bgImg = Images.getImg("menu.png");
+		this.buttonIcon = new ImageIcon(Images.getImg("menu.png"));
 		
 		
 		this.setLayout(new GridBagLayout());
@@ -36,8 +35,9 @@ public class MenuPanel extends JPanel {
 		this.startButton = new JButton(Images.getImgIcon("startButton.png"));
 		startButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-				game.getSoundManager().playClip("click1");
-			    game.changeToCard("game");
+				stateManager.getSoundManager().playClip("click1");
+			    stateManager.changeToCard("game");
+				stateManager.getGamePanel().getInstance().start();
 			}  
 			});  
 		startButton.setBorderPainted(false);
@@ -48,8 +48,8 @@ public class MenuPanel extends JPanel {
 		this.settingsButton = new JButton(Images.getImgIcon("settingsButton.png"));
 		settingsButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){ 
-				game.getSoundManager().playClip("click1");
-			    game.changeToCard("settings");
+				stateManager.getSoundManager().playClip("click1");
+			    stateManager.changeToCard("settings");
 			}  
 			}); 
 		settingsButton.setBorderPainted(false);
@@ -61,7 +61,7 @@ public class MenuPanel extends JPanel {
 		this.quitButton = new JButton(Images.getImgIcon("quitButton.png"));
 		quitButton.addActionListener(new ActionListener(){  
 			public void actionPerformed(ActionEvent e){  
-				game.getSoundManager().playClip("click1");
+				stateManager.getSoundManager().playClip("click1");
 			    System.exit(0);
 			}  
 			});

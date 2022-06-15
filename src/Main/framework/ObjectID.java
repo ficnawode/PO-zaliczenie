@@ -7,5 +7,5 @@ public enum ObjectID {
     Block(),
     Tree(),
     Background(),
-    ;
+    LevelCompleter();
 }

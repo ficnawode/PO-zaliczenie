@@ -63,6 +63,8 @@ public class Handler {
         int width = img.getWidth();
         int height = img.getHeight();
 
+        this.objects.clear();
+
         for(int i = 0; i<height; i++)
             for(int j = 0; j<width; j++) {
                 int pixel = img.getRGB(i,j);
@@ -87,6 +89,11 @@ public class Handler {
                 if(red == 255 && green == 75 && blue == 0)
                     this.addObject(new Lava(i*32, j*32));
 
+                //lava
+                if(red == 255 && green == 255 && blue == 0)
+                    this.addObject(new LevelCompleter(i*32, j*32));
+
+
                 //player
                 if(red == 0 && green == 0 && blue ==255) {
                     this.addObject(new Player(i * 32, j * 32, this));
@@ -102,5 +109,9 @@ public class Handler {
         this.addObject(background);
 
         Collections.sort(objects, Collections.reverseOrder());
+    }
+
+    public Instance getInstance(){
+        return instance;
     }
 }

@@ -27,7 +27,7 @@ public class PausePanel extends JPanel {
 			}  
 			});  
 		
-		menuButton.setBounds(0, 0, 50, 30);
+		menuButton.setBounds(10, 10, 100, 30);
 		this.add(menuButton);
 		
 		this.gameButton = new JButton("back to game");
@@ -38,7 +38,7 @@ public class PausePanel extends JPanel {
 			}  
 			});  
 		
-		gameButton.setBounds(0, 50, 100, 30);
+		gameButton.setBounds(10, 60, 100, 30);
 		this.add(gameButton);
 	}
 

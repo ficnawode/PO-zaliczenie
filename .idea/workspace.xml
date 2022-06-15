@@ -2,43 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5b0fcf1-703d-40e5-9656-355ae0504b09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Objects/LevelCompleter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Input/KeyboardInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Input/MouseInput.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/GamePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/GameWindow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mechanics/Entity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mechanics/Vec2f.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mechanics/Vec2i.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/Images.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/Sound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/SoundManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/images/example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/images/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/images/quitButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/images/settingsButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/images/startButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/sound/click.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ResManagement/sound/click1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input/KeyboardInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Input/MouseInput.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/images/example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/images/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/images/quitButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/images/settingsButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/images/startButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/sound/click.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResManagement/sound/click1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Lava.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Lava.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Player$floatRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Player$floatRectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/Objects/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/PausePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/PausePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/SettingsPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/SettingsPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/SettingsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/SettingsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/StateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/StateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/window/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/window/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/Main/window/Instance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/Main/window/Instance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/ResManagement/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/ResManagement/Sound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PO_platformer/ResManagement/SoundManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PO_platformer/ResManagement/SoundManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/levels/level0.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/levels/level0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/spriteSheets/player/idle_left.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/spriteSheets/player/idle_left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/spriteSheets/player/idle_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/spriteSheets/player/idle_right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/spriteSheets/player/jump_left.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/spriteSheets/player/jump_left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/spriteSheets/player/jump_right.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/spriteSheets/player/jump_right.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/spriteSheets/tileset.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/spriteSheets/tileset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Objects/Lava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Objects/Lava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Objects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Objects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/PausePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/PausePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/SettingsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/SettingsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/StateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/StateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/framework/ObjectID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/framework/ObjectID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/window/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/window/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/window/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/window/Instance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResManagement/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResManagement/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResManagement/SoundManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResManagement/SoundManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -94,8 +86,8 @@
       <recent name="Main" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="PO_platformer" />
       <extension name="coverage">
@@ -108,9 +100,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.window.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -124,5 +128,16 @@
       <updated>1651678577731</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

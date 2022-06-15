@@ -45,7 +45,7 @@ public class Instance extends JPanel implements Runnable {
 
         texture = new Texture();
 
-        level = Images.getLevelImg("level0.png");
+        level = Images.getLevelImg("level1.png");
         this.camera = new Camera(4000,4000);
         handler = new Handler(this.camera, this);
         handler.loadLevelFromImage(level);
@@ -53,12 +53,11 @@ public class Instance extends JPanel implements Runnable {
         parentFrame.createBufferStrategy(3);
         this.bufferStrategy = parentFrame.getBufferStrategy();
 
-
-
         KeyInput listener = new KeyInput(handler, stateManager, this);
         this.addKeyListener(listener);
         parentFrame.addKeyListener(listener);
 
+        this.setLevel("level0.png");
 
     }
 
@@ -156,5 +155,13 @@ public class Instance extends JPanel implements Runnable {
 
     public Thread getThread() {
         return thread;
+    }
+
+    public StateManager getStateManager() {
+        return stateManager;
+    }
+    public void setLevel(String s) {
+        this.level = Images.getLevelImg(s);
+        handler.loadLevelFromImage(this.level);
     }
 }

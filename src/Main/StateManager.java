@@ -51,6 +51,15 @@ public class StateManager {
 		this.currentPanelName = cardName;
 		System.out.println("Changed panel to " + cardName);
 	}
+
+	public void gameOver() {
+		soundManager.playClip("die");
+		this.changeToCard("menu");
+		cardPanel.remove(gamePanel);
+
+		this.gamePanel = new GamePanel(this);
+		cardPanel.add(gamePanel, "game");
+	}
 	
 	public SoundManager getSoundManager() {
 		return soundManager;

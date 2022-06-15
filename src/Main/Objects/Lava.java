@@ -18,10 +18,13 @@ public class Lava extends GameObject {
     private int animationFrameCounter = 0;
     BufferedImage currentFrame;
     Texture texture = Instance.getTexture();
+    private int width;
+    private int height;
 
     public Lava(float x, float y) {
         super(x, y, ObjectID.Lava);
-
+        this.width = 32;
+        this.height = 32;
         animationFrameCounter = (int)(6*Math.random());
         animation = new Animation(texture.getLava(), 5, 32,32);
         currentFrame = animation.getNextFrame();

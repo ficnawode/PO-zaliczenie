@@ -61,8 +61,31 @@ public class Player extends GameObject {
     }
 
     private void collision(LinkedList<GameObject> objects) {
+
         for(int i = 0; i<objects.size(); i++) {
             GameObject tempObject = handler.objects.get(i);
+
+            if(tempObject.getId() == ObjectID.Lava && (
+            getBoundsBottom().intersects(tempObject.getBounds()) ||
+            getBoundsTop().intersects(tempObject.getBounds()) ||
+            getBoundsLeft().intersects(tempObject.getBounds()) ||
+            getBoundsRight().intersects(tempObject.getBounds())
+            )){
+                handler.getInstance().setPaused(true);
+                handler.getInstance().getStateManager().gameOver();
+            }
+
+            if(tempObject.getId() == ObjectID.LevelCompleter && (
+                    getBoundsBottom().intersects(tempObject.getBounds()) ||
+                            getBoundsTop().intersects(tempObject.getBounds()) ||
+                            getBoundsLeft().intersects(tempObject.getBounds()) ||
+                            getBoundsRight().intersects(tempObject.getBounds())
+            )){
+                handler.getInstance().setLevel("level1.png");
+                handler.getInstance().getStateManager().getSoundManager().playClip("levelComplete");
+                System.out.println("level completed");
+            }
+
             if(tempObject.getId() == ObjectID.Block) {
                 if(getBoundsBottom().intersects(tempObject.getBounds())) {
                     //snap to top of block

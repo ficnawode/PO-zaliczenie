@@ -7,8 +7,13 @@ import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+
 
 public class Sound {
+
+	static int volume = 60;
+
 
 	public static Clip loadClip( String fileName )
 	{
@@ -31,6 +36,8 @@ public class Sound {
 	{
 	    if( clip.isRunning() ) clip.stop();
 	            clip.setFramePosition( 0 );
+
+
 	    clip.start();
 	}
 	
